@@ -1,0 +1,144 @@
+<div class="panel panel-default">
+<div class="panel-heading">
+	Add your place to our listings. Make money. Make friends.
+</div>
+<div class="panel-body">
+	<div class="container">
+		
+		<%= form_for @room, :html => { multipart: true } do |f| %>
+
+			<div class="row">
+				<div class="col-md-4 select">
+					<div class="form-group">
+						<label> Home Type </label>
+						<%= f.select :home_type, [["Apartment", "Apartment"], ["House", "House"], ["Pool", "Pool"], ["Yard", "Yard"]], id: "home_type", prompt: "Select your home type", class: "form-control" %>
+					</div>
+				</div>
+
+				<div class="col-md-4 select">
+					<div class="form-group">
+						<label> Ideal for </label>
+						<%= f.select :room_type, [["Party", "Party"], ["Pre Game", "Pre Game"], ["Birthdays", "Birthdays"], ["Weddings", "Weddings"], ["Events", "Events"]], id: "room_type", prompt: "What is your place ideal for", class: "form-control" %>
+					</div>
+				</div>
+
+				<div class="col-md-4 select">
+					<div class="form-group">
+						<label> Accomodates upto : </label>
+						<%= f.select :accomodate, [["1", 1], ["5", 5], ["10", 10], ["25", 25], ["50", 50], ["100", 100], ["500", 500]], prompt: "How many people can it host", class: "form-control" %>
+					</div>
+				</div>
+			</div>
+
+			<div class="row">
+				<div class="col-md-4 select">
+					<div class="form-group">
+						<label> Number of Rooms: </label>
+						<%= f.select :bed_room, [["0", 0], ["1", 1], ["2", 2], ["3", 3], ["4", 4], ["5", 5], ["6", 6], ["7", 7]], prompt: "How many rooms do you have", class: "form-control" %>
+					</div>
+				</div>
+
+				<div class="col-md-4 select">
+					<div class="form-group">
+						<label> Number of Restrooms: </label>
+						<%= f.select :bath_room, [["0", 0], ["1", 1], ["2", 2], ["3", 3], ["4", 4], ["5", 5]], prompt: "Do you have any restrooms?", class: "form-control" %>
+					</div>
+				</div>
+			</div>
+
+			<div class="row">
+				<div class="form-group">
+					<label>Listing Name</label>
+					<%= f.text_field :listing_name, placeholder: "Add a Title to the listing", class: "form-control" %>
+				</div>
+			</div>
+
+			<div class="row">
+				<div class="form-group">
+					<label>Description</label>
+					<%= f.text_area :summary, placeholder: "Tell us about your place. Make it descriptive with all the details to get more people", class: "form-control" %>
+				</div>
+			</div>
+
+			<div class="row">
+				<div class="form-group">
+					<label>Address</label>
+					<%= f.text_field :address, placeholder: "4059 Mt Lee Dr. Hollywood, CA 90068", class: "form-control" %>
+				</div>
+			</div>
+
+			<div class="row">
+				<div class="col-md-4">
+					<div class="form-group">
+						<%= f.check_box :is_tv %> TV
+					</div>
+				</div>
+				<div class="col-md-4">
+					<div class="form-group">
+						<%= f.check_box :is_bbq %> Barbeque grill
+					</div>
+				</div>
+				<div class="col-md-4">
+					<div class="form-group">
+						<%= f.check_box :is_kitchen %> Kitchen
+					</div>
+				</div>
+			</div>
+
+			<div class="row">
+				<div class="col-md-4">
+					<div class="form-group">
+						<%= f.check_box :is_air %> Air Conditioning
+					</div>
+				</div>
+				<div class="col-md-4">
+					<div class="form-group">
+						<%= f.check_box :is_heating %> Room Heating
+					</div>
+				</div>
+				<div class="col-md-4">
+					<div class="form-group">
+						<%= f.check_box :is_internet %> Internet
+					</div>
+				</div>
+			</div>
+
+			<div class="row">
+				<div class="row-md-4">
+					<div class="form-group">
+						<label> Hourly Price </label>
+						<div class="input-group">
+							<div class="input-group-addon">$</div>
+							<%= f.text_field :price, placeholder: "e.g. 50$", class: "form-control" %>
+						</div>
+					</div>
+				</div>
+			</div>
+
+
+				<div class="row">
+					<div class="col-md-4">
+						<div class="form-group">							
+							<span class="btn btn-default btn-file">
+							    <i class="fa fa-cloud-upload fa-lg"></i> Upload Photos 
+							    <%= file_field_tag "images[]", type: :file, multiple: true %>
+							</span>
+						</div>		
+					</div>
+				</div>
+
+				<div id="photos"><%= render 'photos/list' %></div>
+
+			<div class="row">
+				<div class="form-group">
+					<%= f.check_box :active %> Active
+				</div>
+			</div>
+
+			<div class="actions">
+				<%= f.submit "Save", class: "btn btn-primary" %>
+			</div>
+		<% end %>
+	</div>
+</div>
+</div>
