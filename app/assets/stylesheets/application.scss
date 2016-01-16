@@ -16,30 +16,30 @@ body {
 }
 
 .navbar-default .navbar-brand {
-  color: #000066;
+  color: #8e44ad;
   font-size: 2em;
   font-weight: 400;
 }
 
 .btn-primary.btn {
-  border: 1px solid #000066;
+  border: 1px solid #8e44ad;
   border-radius: 2px;
   font-weight: bold;
-  background-color: #000066;
+  background-color: #8e44ad;
   color: #fff;
   padding: 10px 25px 10px 25px;
 }
 
 .btn-primary.btn:hover, .btn-primary.btn:focus {
-  border-color: #7e7eff;
-  border-bottom-color: #0000fa;
-  background-color: #7e7eff;  
+  border-color: #9b59b6;
+  border-bottom-color: #8e44ad;
+  background-color: #9b59b6;  
   outline:none;
 }
 
 .btn-primary.btn:active {
-  border-color: #0000e0;
-  background-color: #0000e0;  
+  border-color: #9b59b6;
+  background-color: #9b59b6;  
   outline:none;
 }
 
@@ -52,7 +52,7 @@ body {
 
 .panel-default .panel-heading {
   color: #565a5c;
-  background-color: #edefed;
+  background-color: #ecf0f1;
   font-size: 18px;
   font-weight: 400
 }
@@ -73,7 +73,7 @@ body {
 }
 
 .description {
-  color: #575757;
+  color: #565a5c;
   font-size: 15px;
   font-weight: 500;
   line-height: 25px;
@@ -112,12 +112,12 @@ body {
 .sidebar-item {
   padding: 10px 0;
   font-size: 16px;
-  color: #82888a;
+  color: #565a5c;
   border-bottom: 1px solid #CCC;
 }
 
 .sidebar-link {
-  color: #82888a;
+  color: #565a5c;
   text-decoration: none;
 }
 
@@ -155,7 +155,7 @@ select {
   content: '\25bc';
   font-size: 1.2em;
   position: absolute;  
-  color: #82888A;
+  color: #565a5c;
   top: 40px;  
   right: 30px;
   transform: scale(0.84, 0.42);
@@ -180,7 +180,7 @@ input[type="checkbox"]:checked:before {
   font-size: 0.95em;
   text-align: center;
   width: 1.25em;
-  color: #000066;
+  color: #8e44ad;
 }
 
 .btn-file {
@@ -232,7 +232,7 @@ input[type="checkbox"]:checked:before {
 }
 
 .price_tag {
-  background-color: #606567;
+  background-color: #9b59b6;
   color: #fff;
   font-size: 20px;
   padding: 10px;
@@ -240,12 +240,12 @@ input[type="checkbox"]:checked:before {
 }
 
 .conversation {
-  color: #7f7f7f;
+  color: #565a5c;
   padding: 10px;
 }
 
 .conversation:hover, .conversation:focus {
-  background-color: #F4F4F5;
+  background-color: #cacccd;
 }
 
 #wrapper { 
@@ -285,4 +285,78 @@ input[type="checkbox"]:checked:before {
   color: #fff;
   vertical-align: middle;
   display: table-cell;
+}
+
+.navbar-default {
+  background-color: #9b59b6;
+  border-color: #8e44ad;
+}
+.navbar-default .navbar-brand {
+  color: #ecf0f1;
+}
+.navbar-default .navbar-brand:hover, .navbar-default .navbar-brand:focus {
+  color: #ecdbff;
+}
+.navbar-default .navbar-text {
+  color: #ecf0f1;
+}
+.navbar-default .navbar-nav > li > a {
+  color: #ecf0f1;
+}
+.navbar-default .navbar-nav > li > a:hover, .navbar-default .navbar-nav > li > a:focus {
+  color: #ecdbff;
+}
+.navbar-default .navbar-nav > li > .dropdown-menu {
+  background-color: #9b59b6;
+}
+.navbar-default .navbar-nav > li > .dropdown-menu > li > a {
+  color: #ecf0f1;
+}
+.navbar-default .navbar-nav > li > .dropdown-menu > li > a:hover,
+.navbar-default .navbar-nav > li > .dropdown-menu > li > a:focus {
+  color: #ecdbff;
+  background-color: #8e44ad;
+}
+.navbar-default .navbar-nav > li > .dropdown-menu > li > .divider {
+  background-color: #9b59b6;
+}
+.navbar-default .navbar-nav > .active > a, .navbar-default .navbar-nav > .active > a:hover, .navbar-default .navbar-nav > .active > a:focus {
+  color: #ecdbff;
+  background-color: #8e44ad;
+}
+.navbar-default .navbar-nav > .open > a, .navbar-default .navbar-nav > .open > a:hover, .navbar-default .navbar-nav > .open > a:focus {
+  color: #ecdbff;
+  background-color: #8e44ad;
+}
+.navbar-default .navbar-toggle {
+  border-color: #8e44ad;
+}
+.navbar-default .navbar-toggle:hover, .navbar-default .navbar-toggle:focus {
+  background-color: #8e44ad;
+}
+.navbar-default .navbar-toggle .icon-bar {
+  background-color: #ecf0f1;
+}
+.navbar-default .navbar-collapse,
+.navbar-default .navbar-form {
+  border-color: #ecf0f1;
+}
+.navbar-default .navbar-link {
+  color: #ecf0f1;
+}
+.navbar-default .navbar-link:hover {
+  color: #ecdbff;
+}
+
+@media (max-width: 767px) {
+  .navbar-default .navbar-nav .open .dropdown-menu > li > a {
+    color: #ecf0f1;
+  }
+  .navbar-default .navbar-nav .open .dropdown-menu > li > a:hover, .navbar-default .navbar-nav .open .dropdown-menu > li > a:focus {
+    color: #ecdbff;
+  }
+  .navbar-default .navbar-nav .open .dropdown-menu > .active > a, .navbar-default .navbar-nav .open .dropdown-menu > .active > a:hover, .navbar-default .navbar-nav .open .dropdown-menu > .active > a:focus {
+    color: #ecdbff;
+    background-color: #8e44ad;
+  }
 }

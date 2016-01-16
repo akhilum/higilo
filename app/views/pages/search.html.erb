@@ -11,7 +11,7 @@
 	        	<% if @arrRooms.length > 0 %>
 		          center: new google.maps.LatLng(<%= @arrRooms[0].latitude %>, <%= @arrRooms[0].longitude %>),
 		        <% else %>  
-		        	center: new google.maps.LatLng(44.5403, -78.5463),
+		        	center: new google.maps.LatLng(37.5376535, -122.2995755),
 		        <% end %>  
 	          zoom: 14,
 	          mapTypeId: google.maps.MapTypeId.ROADMAP
@@ -20,8 +20,8 @@
 
 	        <% @arrRooms.each do |room| %>	
 		        var marker = new google.maps.Marker({
-		        	position: new google.maps.LatLng(<%= room.latitude %>, <%= room.longitude %>),
-		        	title: "AirAlien" 
+		        	position: new google.maps.LatLng(<%= @room.latitude %>, <%= @room.longitude %>),
+		        	title: "Higilo" 
 		        });
 
 		        marker.setMap(map);
