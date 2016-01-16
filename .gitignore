@@ -19,4 +19,4 @@
 Gemfile.lock
 /config/database.yml
 /config/secrets.yml
-
+/config/environments/production.rb
